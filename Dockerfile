@@ -4,11 +4,12 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy package files (use Railway-safe version)
+COPY package.railway.json package.json
+COPY package-lock.json ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm ci --only=production --ignore-scripts
 
 # Copy source code
 COPY . .
