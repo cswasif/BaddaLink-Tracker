@@ -180,6 +180,12 @@ export class UWebSocketsTracker {
   }
 
   private buildApplication(): void {
+    // Handle HTTP requests first
+    this.#app.get("/", (response, request) => {
+      response.writeHeader("Content-Type", "text/plain");
+      response.end("WebSocket Server Running");
+    });
+
     // Handle WebSocket connections on the specified path
     this.#app.ws(this.settings.websockets.path, {
       compression: this.settings.websockets.compression,
@@ -196,10 +202,10 @@ export class UWebSocketsTracker {
       close: this.onClose,
     });
 
-    // Add a simple HTTP handler for root path to help with Railway compatibility
+    // Handle other HTTP routes
     this.#app.get("/*", (response, request) => {
       response.writeHeader("Content-Type", "text/plain");
-      response.end("WebSocket Server Running");
+      response.end("WebSocket Server Running - Use /ws for WebSocket connections");
     });
   }
 
