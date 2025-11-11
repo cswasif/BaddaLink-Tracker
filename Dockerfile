@@ -1,5 +1,11 @@
-# Use Node.js 20 Alpine for uWebSockets.js compatibility
-FROM node:20-alpine
+# Use Node.js 20 with glibc for uWebSockets.js compatibility
+FROM node:20-slim
+
+# Install system dependencies for uWebSockets.js
+RUN apt-get update && apt-get install -y \
+    libc6 \
+    libstdc++6 \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
