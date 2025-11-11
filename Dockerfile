@@ -7,6 +7,10 @@ RUN apt-get update && apt-get install -y \
     libstdc++6 \
     && rm -rf /var/lib/apt/lists/*
 
+# Set environment variables for Railway WebSocket support
+ENV PORT=8000
+ENV HOST=0.0.0.0
+
 # Set working directory
 WORKDIR /app
 

@@ -208,6 +208,9 @@ export class UWebSocketsTracker {
     request: HttpRequest,
     context: us_socket_context_t,
   ): void => {
+    // Log WebSocket upgrade attempts for debugging
+    console.log(`[WebSocket Upgrade] URL: ${request.getUrl()}, Origin: ${request.getHeader("origin")}, User-Agent: ${request.getHeader("user-agent")}`);
+    
     if (
       this.maxConnections !== 0 &&
       this.webSocketsCount > this.maxConnections
@@ -279,6 +282,11 @@ export class UWebSocketsTracker {
       );
     }
 
+    // Add Railway-compatible headers for WebSocket upgrade
+    response.writeHeader("X-Railway-WebSocket", "true");
+    response.writeHeader("X-Forwarded-For", request.getHeader("x-forwarded-for") || "");
+    response.writeHeader("X-Forwarded-Proto", request.getHeader("x-forwarded-proto") || "https");
+    
     response.upgrade(
       {},
       request.getHeader("sec-websocket-key"),

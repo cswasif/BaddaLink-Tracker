@@ -52,6 +52,8 @@ export async function runSocketApp(
     const port = process.env.PORT ? parseInt(process.env.PORT) : (serverSettings.server?.port ?? 8000);
     const host = serverSettings.server?.host ?? "0.0.0.0";
     
+    console.info(`Starting server on ${host}:${port} (PORT env: ${process.env.PORT || 'not set'})`);
+    
     const modifiedSettings = {
       ...serverSettings,
       server: {
@@ -71,7 +73,7 @@ export async function runSocketApp(
     servers.push(server);
     await server.run();
     console.info(
-      `listening ${host}:${port}`,
+      `✅ Server listening on ${host}:${port}`,
     );
   });
 
