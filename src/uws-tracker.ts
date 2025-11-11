@@ -209,7 +209,18 @@ export class UWebSocketsTracker {
     context: us_socket_context_t,
   ): void => {
     // Log WebSocket upgrade attempts for debugging
-    console.log(`[WebSocket Upgrade] URL: ${request.getUrl()}, Origin: ${request.getHeader("origin")}, User-Agent: ${request.getHeader("user-agent")}`);
+    console.log(`[WebSocket Upgrade] URL: ${request.getUrl()}, Origin: ${request.getHeader("origin")}, User-Agent: ${request.getHeader("user-agent")}, Upgrade: ${request.getHeader("upgrade")}, Connection: ${request.getHeader("connection")}`);
+    
+    // Check if this is actually a WebSocket upgrade request
+    const upgradeHeader = request.getHeader("upgrade");
+    const connectionHeader = request.getHeader("connection");
+    
+    if (!upgradeHeader || upgradeHeader.toLowerCase() !== "websocket" || 
+        !connectionHeader || !connectionHeader.toLowerCase().includes("upgrade")) {
+      console.log(`[WebSocket Upgrade] Rejected: Not a WebSocket upgrade request`);
+      response.close();
+      return;
+    }
     
     if (
       this.maxConnections !== 0 &&
