@@ -180,6 +180,7 @@ export class UWebSocketsTracker {
   }
 
   private buildApplication(): void {
+    // Handle WebSocket connections on the specified path
     this.#app.ws(this.settings.websockets.path, {
       compression: this.settings.websockets.compression,
       maxPayloadLength: this.settings.websockets.maxPayloadLength,
@@ -193,6 +194,12 @@ export class UWebSocketsTracker {
       },
       message: this.onMessage,
       close: this.onClose,
+    });
+
+    // Add a simple HTTP handler for root path to help with Railway compatibility
+    this.#app.get("/*", (response, request) => {
+      response.writeHeader("Content-Type", "text/plain");
+      response.end("WebSocket Server Running");
     });
   }
 
@@ -221,10 +228,6 @@ export class UWebSocketsTracker {
       response.close();
       return;
     }
-
-    // Add Railway-specific headers for better proxy compatibility
-    response.writeHeader("X-Railway-Proxy", "true");
-    response.writeHeader("X-Railway-Port", this.settings.server.port.toString());
     
     if (
       this.maxConnections !== 0 &&
@@ -297,10 +300,7 @@ export class UWebSocketsTracker {
       );
     }
 
-    // Add Railway-compatible headers for WebSocket upgrade
-    response.writeHeader("X-Railway-WebSocket", "true");
-    response.writeHeader("X-Forwarded-For", request.getHeader("x-forwarded-for") || "");
-    response.writeHeader("X-Forwarded-Proto", request.getHeader("x-forwarded-proto") || "https");
+    // Keep headers minimal for Railway compatibility
     
     response.upgrade(
       {},
