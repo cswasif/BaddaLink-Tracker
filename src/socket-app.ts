@@ -48,9 +48,22 @@ export async function runSocketApp(
   };
 
   const serverPromises = settings.servers.map(async (serverSettings) => {
+    // Use PORT environment variable if available (Railway requirement)
+    const port = process.env.PORT ? parseInt(process.env.PORT) : (serverSettings.server?.port ?? 8000);
+    const host = serverSettings.server?.host ?? "0.0.0.0";
+    
+    const modifiedSettings = {
+      ...serverSettings,
+      server: {
+        ...serverSettings.server,
+        port,
+        host
+      }
+    };
+    
     const server = buildUwsTracker({
       tracker,
-      serverSettings,
+      serverSettings: modifiedSettings,
       websocketsAccess: settings.websocketsAccess,
       indexHtml,
       getServersStats,
@@ -58,7 +71,7 @@ export async function runSocketApp(
     servers.push(server);
     await server.run();
     console.info(
-      `listening ${server.settings.server.host}:${server.settings.server.port}`,
+      `listening ${host}:${port}`,
     );
   });
 

@@ -1,254 +1,134 @@
-2025-11-11T06:55:55.000000000Z [inf]  Starting Container
-2025-11-11T06:55:57.188876063Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:55:57.188888551Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:55:57.188906472Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:55:57.188914979Z [inf]  
-2025-11-11T06:55:57.188927260Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:55:57.188934768Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:55:57.188942354Z [err]  		      ^
-2025-11-11T06:55:57.188954636Z [err]  
-2025-11-11T06:55:57.188956486Z [err]      at /app/node_modules/uWebSockeAts.js/uws.js:22:9
-2025-11-11T06:55:57.188968191Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:55:57.188969054Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:55:57.188969289Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:55:57.188980248Z [err]  
-2025-11-11T06:55:57.188987112Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:55:57.188989585Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:55:57.188998930Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:55:57.189006729Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:55:57.189030941Z [inf]  
-2025-11-11T06:55:57.189035614Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:55:57.191904198Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:55:57.191909741Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:55:57.191915335Z [err]  
-2025-11-11T06:55:57.191923801Z [err]  Node.js v20.19.5
-2025-11-11T06:55:57.192444265Z [inf]  
-2025-11-11T06:55:57.192449598Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:55:57.192453860Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:55:57.192457335Z [inf]  
-2025-11-11T06:55:57.277836632Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:55:57.277842707Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:55:57.277848925Z [err]  		      ^
-2025-11-11T06:55:57.277855629Z [err]  
-2025-11-11T06:55:57.277861871Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:55:57.277867739Z [err]  
-2025-11-11T06:55:57.277873298Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:55:57.277878605Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:55:57.277885400Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:55:57.277891162Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:55:57.277896666Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:55:57.277902442Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:55:57.277906925Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:55:57.277920759Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:55:57.277926106Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:55:57.277932382Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:55:57.277939253Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:55:57.279239145Z [err]  
-2025-11-11T06:55:57.279245931Z [err]  Node.js v20.19.5
-2025-11-11T06:55:58.303031857Z [inf]  
-2025-11-11T06:55:58.303038463Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:55:58.303046586Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:55:58.303053157Z [inf]  
-2025-11-11T06:55:58.368560647Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:55:58.368571386Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:55:58.368579446Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:55:58.368585849Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:55:58.368594121Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:55:58.368600628Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:55:58.368606057Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:55:58.368612372Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:55:58.368626308Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:55:58.368632501Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:55:58.368640694Z [err]  		      ^
-2025-11-11T06:55:58.368647070Z [err]  
-2025-11-11T06:55:58.368653500Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:55:58.368660262Z [err]  
-2025-11-11T06:55:58.368668733Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:55:58.368701902Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:55:58.368709311Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:55:58.370123379Z [err]  
-2025-11-11T06:55:58.370132387Z [err]  Node.js v20.19.5
-2025-11-11T06:55:59.671102719Z [inf]  
-2025-11-11T06:55:59.671117206Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:55:59.671126090Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:55:59.671134286Z [inf]  
-2025-11-11T06:55:59.738319520Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:55:59.738329763Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:55:59.738335807Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:55:59.738336508Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:55:59.738341478Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:55:59.738342036Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:55:59.738346858Z [err]  		      ^
-2025-11-11T06:55:59.738347567Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:55:59.738352786Z [err]  
-2025-11-11T06:55:59.738354853Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:55:59.738358443Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:55:59.738360831Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:55:59.738365901Z [err]  
-2025-11-11T06:55:59.738365947Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:55:59.738370993Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:55:59.738375078Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:55:59.738379179Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:55:59.740575793Z [err]  
-2025-11-11T06:55:59.740588056Z [err]  Node.js v20.19.5
-2025-11-11T06:56:00.752627158Z [inf]  
-2025-11-11T06:56:00.752631455Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:56:00.752635626Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:56:00.752642300Z [inf]  
-2025-11-11T06:56:01.100951311Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:56:01.100960481Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:56:01.100966931Z [err]  		      ^
-2025-11-11T06:56:01.100974353Z [err]  
-2025-11-11T06:56:01.100981029Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:56:01.100988028Z [err]  
-2025-11-11T06:56:01.100994525Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:56:01.101000324Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:56:01.101006422Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:56:01.101013225Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:56:01.101019356Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:56:01.101026018Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:56:01.101035303Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:56:01.101042947Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:56:01.101049883Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:56:01.101056472Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:56:01.101067429Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:56:01.101958994Z [err]  
-2025-11-11T06:56:01.101966310Z [err]  Node.js v20.19.5
-2025-11-11T06:56:02.106991073Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:56:02.107004578Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:56:02.107008300Z [inf]  
-2025-11-11T06:56:02.107014511Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:56:02.107015316Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:56:02.107024394Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:56:02.107025425Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:56:02.107033789Z [inf]  
-2025-11-11T06:56:02.107039284Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:56:02.107043880Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:56:02.107048639Z [err]  		      ^
-2025-11-11T06:56:02.107053607Z [err]  
-2025-11-11T06:56:02.107058894Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:56:02.107062937Z [err]  
-2025-11-11T06:56:02.107067939Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:56:02.107073317Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:56:02.107078122Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:56:02.107084189Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:56:02.107090047Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:56:02.109608144Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:56:02.109616230Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:56:02.109622771Z [err]  
-2025-11-11T06:56:02.109628201Z [err]  Node.js v20.19.5
-2025-11-11T06:56:03.206052405Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:56:03.206069881Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:56:03.206077889Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:56:03.206086043Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:56:03.206099800Z [inf]  
-2025-11-11T06:56:03.206101883Z [err]  
-2025-11-11T06:56:03.206105339Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:56:03.206110753Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:56:03.206115980Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:56:03.206118731Z [inf]  
-2025-11-11T06:56:03.206125337Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:56:03.206126575Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:56:03.206131123Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:56:03.206136555Z [err]  		      ^
-2025-11-11T06:56:03.206138837Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:56:03.206142483Z [err]  
-2025-11-11T06:56:03.206148457Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:56:03.206149217Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:56:03.206158171Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:56:03.208867886Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:56:03.208875732Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:56:03.208885348Z [err]  
-2025-11-11T06:56:03.208892872Z [err]  Node.js v20.19.5
-2025-11-11T06:56:04.142394959Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:56:04.142405136Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:56:04.142411800Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:56:04.142418301Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:56:04.142426927Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:56:04.142433774Z [inf]  
-2025-11-11T06:56:04.142434856Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:56:04.142438810Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:56:04.142442779Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:56:04.142444346Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:56:04.142448845Z [inf]  
-2025-11-11T06:56:04.142452859Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:56:04.142457248Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:56:04.142461223Z [err]  		      ^
-2025-11-11T06:56:04.142465289Z [err]  
-2025-11-11T06:56:04.142469680Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:56:04.142473474Z [err]  
-2025-11-11T06:56:04.142477928Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:56:04.142482259Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:56:04.143514982Z [err]  Node.js v20.19.5
-2025-11-11T06:56:04.143563175Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:56:04.143575348Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:56:04.143583568Z [err]  
-2025-11-11T06:56:05.165333752Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:56:05.165344769Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:56:05.165352272Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:56:05.165359427Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:56:05.165366981Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:56:05.165367167Z [inf]  
-2025-11-11T06:56:05.165376104Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:56:05.165376574Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:56:05.165385126Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:56:05.165385712Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:56:05.165391870Z [inf]  
-2025-11-11T06:56:05.165396051Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:56:05.165400894Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:56:05.165405041Z [err]  		      ^
-2025-11-11T06:56:05.165409464Z [err]  
-2025-11-11T06:56:05.165413813Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:56:05.165417790Z [err]  
-2025-11-11T06:56:05.165421939Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:56:05.165425787Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:56:05.166658319Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:56:05.166668891Z [err]  
-2025-11-11T06:56:05.166676467Z [err]  Node.js v20.19.5
-2025-11-11T06:56:05.166693231Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:56:06.216000587Z [inf]  
-2025-11-11T06:56:06.216005290Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:56:06.216010904Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:56:06.216016941Z [inf]  
-2025-11-11T06:56:06.285010412Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:56:06.285017019Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:56:06.285023646Z [err]  		      ^
-2025-11-11T06:56:06.285028125Z [err]  
-2025-11-11T06:56:06.285032409Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:56:06.285036770Z [err]  
-2025-11-11T06:56:06.285041432Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:56:06.285045336Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:56:06.285049001Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:56:06.285052603Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:56:06.285056160Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:56:06.285060231Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:56:06.285064653Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:56:06.285069374Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:56:06.285072909Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:56:06.285076716Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:56:06.285081214Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:56:06.286787200Z [err]  
-2025-11-11T06:56:06.286794288Z [err]  Node.js v20.19.5
-2025-11-11T06:56:07.344708201Z [inf]  
-2025-11-11T06:56:07.344714678Z [inf]  > wt-tracker@0.0.1 start
-2025-11-11T06:56:07.344718917Z [inf]  > node ./lib/run-tracker.js railway-config.json
-2025-11-11T06:56:07.344726477Z [inf]  
-2025-11-11T06:56:07.412131165Z [err]  /app/node_modules/uWebSockets.js/uws.js:22
-2025-11-11T06:56:07.412136313Z [err]  		throw new Error('This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\n' + e.toString());
-2025-11-11T06:56:07.412141547Z [err]  		      ^
-2025-11-11T06:56:07.412148776Z [err]  
-2025-11-11T06:56:07.412153587Z [err]  Error: This version of uWS.js (v20.52.0) supports only Node.js versions 20, 22, 23 and 24 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).
-2025-11-11T06:56:07.412158780Z [err]  
-2025-11-11T06:56:07.412163620Z [err]  Error: Error loading shared library ld-linux-x86-64.so.2: No such file or directory (needed by /app/node_modules/uWebSockets.js/uws_linux_x64_115.node)
-2025-11-11T06:56:07.412168629Z [err]      at /app/node_modules/uWebSockets.js/uws.js:22:9
-2025-11-11T06:56:07.412173545Z [err]      at Object.<anonymous> (/app/node_modules/uWebSockets.js/uws.js:24:3)
-2025-11-11T06:56:07.412178507Z [err]      at Module._compile (node:internal/modules/cjs/loader:1521:14)
-2025-11-11T06:56:07.412183353Z [err]      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-2025-11-11T06:56:07.412190020Z [err]      at Module.load (node:internal/modules/cjs/loader:1266:32)
-2025-11-11T06:56:07.412194616Z [err]      at Module._load (node:internal/modules/cjs/loader:1091:12)
-2025-11-11T06:56:07.412199848Z [err]      at cjsLoader (node:internal/modules/esm/translators:298:15)
-2025-11-11T06:56:07.412207181Z [err]      at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
-2025-11-11T06:56:07.412218618Z [err]      at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
-2025-11-11T06:56:07.412223044Z [err]      at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
-2025-11-11T06:56:07.412967327Z [err]  
-2025-11-11T06:56:07.412972358Z [err]  Node.js v20.19.5
+2025-11-11T06:58:59.004093723Z [inf]  
+2025-11-11T06:58:59.594063968Z [inf]  [35m[Region: us-west1][0m
+2025-11-11T06:58:59.601162313Z [inf]  [35m=========================
+2025-11-11T06:58:59.601185387Z [inf]  Using Detected Dockerfile
+2025-11-11T06:58:59.601188997Z [inf]  =========================
+2025-11-11T06:58:59.601192819Z [inf]  [0m
+2025-11-11T06:58:59.601203660Z [inf]  context: hj4l-aD0z
+2025-11-11T06:58:59.750855490Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:58:59.750898288Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:58:59.750913424Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:58:59.760478741Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:58:59.762420940Z [inf]  [internal] load metadata for docker.io/library/node:20-slim
+2025-11-11T06:58:59.765726899Z [inf]  [auth] library/node:pull token for registry-1.docker.io
+2025-11-11T06:58:59.765750103Z [inf]  [auth] library/node:pull token for registry-1.docker.io
+2025-11-11T06:59:00.754857141Z [inf]  [internal] load metadata for docker.io/library/node:20-slim
+2025-11-11T06:59:00.754994963Z [inf]  [internal] load .dockerignore
+2025-11-11T06:59:00.755113614Z [inf]  [internal] load .dockerignore
+2025-11-11T06:59:00.755306094Z [inf]  [internal] load .dockerignore
+2025-11-11T06:59:00.763461388Z [inf]  [internal] load .dockerignore
+2025-11-11T06:59:00.766877728Z [inf]  [9/9] RUN npm prune --production
+2025-11-11T06:59:00.766904518Z [inf]  [8/9] RUN npm run railway:build
+2025-11-11T06:59:00.766913094Z [inf]  [7/9] COPY . .
+2025-11-11T06:59:00.766921433Z [inf]  [6/9] RUN npm ci --ignore-scripts
+2025-11-11T06:59:00.766936508Z [inf]  [5/9] COPY package-lock.json ./
+2025-11-11T06:59:00.766948387Z [inf]  [4/9] COPY package.railway.json package.json
+2025-11-11T06:59:00.766958039Z [inf]  [internal] load build context
+2025-11-11T06:59:00.766967198Z [inf]  [3/9] WORKDIR /app
+2025-11-11T06:59:00.766976973Z [inf]  [2/9] RUN apt-get update && apt-get install -y     libc6     libstdc++6     && rm -rf /var/lib/apt/lists/*
+2025-11-11T06:59:00.766987890Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:00.767003736Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:00.767013747Z [inf]  [internal] load build context
+2025-11-11T06:59:00.771815601Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:00.771963816Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:00.772205993Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:00.772223320Z [inf]  [internal] load build context
+2025-11-11T06:59:00.794231073Z [inf]  [internal] load build context
+2025-11-11T06:59:00.795511023Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:00.798189576Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:01.318020757Z [inf]  [1/9] FROM docker.io/library/node:20-slim@sha256:12541e65a3777c6035245518eb43006ed08ca8c684e68cd04ecb4653bdf6cfe1
+2025-11-11T06:59:02.240658464Z [inf]  [2/9] RUN apt-get update && apt-get install -y     libc6     libstdc++6     && rm -rf /var/lib/apt/lists/*
+2025-11-11T06:59:02.370919021Z [inf]  Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+
+2025-11-11T06:59:02.394693447Z [inf]  Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+
+2025-11-11T06:59:02.40369516Z [inf]  Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+
+2025-11-11T06:59:02.453809946Z [inf]  Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8791 kB]
+
+2025-11-11T06:59:02.530672142Z [inf]  Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+
+2025-11-11T06:59:02.539524583Z [inf]  Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [284 kB]
+
+2025-11-11T06:59:03.468503898Z [inf]  Fetched 9337 kB in 1s (8315 kB/s)
+Reading package lists...
+2025-11-11T06:59:03.90354758Z [inf]  
+
+2025-11-11T06:59:03.921192857Z [inf]  Reading package lists...
+2025-11-11T06:59:04.341233959Z [inf]  
+
+2025-11-11T06:59:04.353639458Z [inf]  Building dependency tree...
+2025-11-11T06:59:04.445478618Z [inf]  
+Reading state information...
+2025-11-11T06:59:04.445594223Z [inf]  
+
+2025-11-11T06:59:04.555950038Z [inf]  libc6 is already the newest version (2.36-9+deb12u13).
+libstdc++6 is already the newest version (12.2.0-14+deb12u1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+2025-11-11T06:59:04.572095602Z [inf]  [2/9] RUN apt-get update && apt-get install -y     libc6     libstdc++6     && rm -rf /var/lib/apt/lists/*
+2025-11-11T06:59:04.572904127Z [inf]  [3/9] WORKDIR /app
+2025-11-11T06:59:04.584029131Z [inf]  [3/9] WORKDIR /app
+2025-11-11T06:59:04.584910985Z [inf]  [4/9] COPY package.railway.json package.json
+2025-11-11T06:59:04.596002770Z [inf]  [4/9] COPY package.railway.json package.json
+2025-11-11T06:59:04.597117510Z [inf]  [5/9] COPY package-lock.json ./
+2025-11-11T06:59:04.651123590Z [inf]  [5/9] COPY package-lock.json ./
+2025-11-11T06:59:04.652775199Z [inf]  [6/9] RUN npm ci --ignore-scripts
+2025-11-11T06:59:18.0322753Z [inf]  
+added 163 packages, and audited 164 packages in 13s
+
+2025-11-11T06:59:18.032330339Z [inf]  
+53 packages are looking for funding
+  run `npm fund` for details
+
+2025-11-11T06:59:18.033781902Z [inf]  
+1 low severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+2025-11-11T06:59:18.035536137Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.6.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+npm notice To update run: npm install -g npm@11.6.2
+npm notice
+
+2025-11-11T06:59:18.236170406Z [inf]  [6/9] RUN npm ci --ignore-scripts
+2025-11-11T06:59:18.237528146Z [inf]  [7/9] COPY . .
+2025-11-11T06:59:18.343712267Z [inf]  [7/9] COPY . .
+2025-11-11T06:59:18.345633004Z [inf]  [8/9] RUN npm run railway:build
+2025-11-11T06:59:18.547807914Z [inf]  
+> wt-tracker@0.0.1 railway:build
+> npm run clean && npm run compile
+
+
+2025-11-11T06:59:18.647905946Z [inf]  
+> wt-tracker@0.0.1 clean
+> rimraf lib
+
+
+2025-11-11T06:59:18.813943195Z [inf]  
+> wt-tracker@0.0.1 compile
+> tsc
+
+
+2025-11-11T06:59:20.589507958Z [inf]  [8/9] RUN npm run railway:build
+2025-11-11T06:59:20.591474174Z [inf]  [9/9] RUN npm prune --production
+2025-11-11T06:59:20.750121761Z [inf]  npm warn config production Use `--omit=dev` instead.
+
+2025-11-11T06:59:21.294375456Z [inf]  
+up to date, audited 4 packages in 568ms
+
+2025-11-11T06:59:21.295032876Z [inf]  
+found 0 vulnerabilities
+
+2025-11-11T06:59:21.351724685Z [inf]  [9/9] RUN npm prune --production
+2025-11-11T06:59:21.353561244Z [inf]  exporting to docker image format
+2025-11-11T06:59:21.353599294Z [inf]  exporting to image
+2025-11-11T06:59:23.625316233Z [inf]  [auth] sharing credentials for production-us-west2.railway-registry.com
+2025-11-11T06:59:23.625373863Z [inf]  [auth] sharing credentials for production-us-west2.railway-registry.com
+2025-11-11T06:59:24.606598857Z [inf]  importing to docker
+2025-11-11T06:59:28.248090980Z [inf]  importing to docker
+2025-11-11T07:00:00.203410304Z [inf]  [92mBuild time: 60.60 seconds[0m
