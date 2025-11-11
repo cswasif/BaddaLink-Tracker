@@ -6,7 +6,7 @@
     "host": "0.0.0.0"
   },
       "websockets": {
-        "path": "/*",
+    "path": "/*",
         "maxPayloadLength": 65536,
         "idleTimeout": 240,
         "compression": 1,

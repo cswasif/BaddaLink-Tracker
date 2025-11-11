@@ -221,6 +221,10 @@ export class UWebSocketsTracker {
       response.close();
       return;
     }
+
+    // Add Railway-specific headers for better proxy compatibility
+    response.writeHeader("X-Railway-Proxy", "true");
+    response.writeHeader("X-Railway-Port", this.settings.server.port.toString());
     
     if (
       this.maxConnections !== 0 &&

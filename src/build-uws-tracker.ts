@@ -41,6 +41,11 @@ export function buildUwsTracker({
         response.end(indexHtml);
       }
     })
+    .get("/health", (response: HttpResponse, request: HttpRequest) => {
+      debugRequest(server, request);
+      response.writeHeader("Content-Type", "application/json");
+      response.end(JSON.stringify({ status: "ok", timestamp: Date.now() }));
+    })
     .get(
       "/stats.json",
       async (response: HttpResponse, request: HttpRequest) => {
