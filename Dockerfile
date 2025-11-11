@@ -8,14 +8,17 @@ WORKDIR /app
 COPY package.railway.json package.json
 COPY package-lock.json ./
 
-# Install dependencies
-RUN npm ci --only=production --ignore-scripts
+# Install all dependencies (including dev dependencies for build)
+RUN npm ci --ignore-scripts
 
 # Copy source code
 COPY . .
 
 # Build the project
-RUN npm run build
+RUN npm run railway:build
+
+# Remove dev dependencies after build to reduce image size
+RUN npm prune --production
 
 # Expose port (Railway will provide PORT env variable)
 EXPOSE ${PORT:-8000}

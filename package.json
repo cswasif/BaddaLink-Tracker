@@ -40,7 +40,7 @@
     "test:coverage": "vitest run --coverage",
     "test:compile": "tsc --project tsconfig.test.json",
     "test:clean": "rimraf test_dist",
-    "railway:build": "npm run build",
+    "railway:build": "npm run clean && npm run compile",
     "railway:start": "npm start"
   },
   "repository": {

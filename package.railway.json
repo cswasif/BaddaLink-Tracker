@@ -30,7 +30,7 @@
     "build": "npm run clean && npm run compile",
     "compile": "tsc",
     "clean": "rimraf lib",
-    "railway:build": "npm run build",
+    "railway:build": "npm run clean && npm run compile",
     "railway:start": "npm start"
   },
   "repository": {

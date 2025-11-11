@@ -1,0 +1,131 @@
+2025-11-11T06:48:08.142240554Z [inf]  
+2025-11-11T06:48:08.520220472Z [inf]  [35m[Region: us-west1][0m
+2025-11-11T06:48:08.528108174Z [inf]  [35m=========================
+2025-11-11T06:48:08.528136964Z [inf]  Using Detected Dockerfile
+2025-11-11T06:48:08.528143388Z [inf]  =========================
+2025-11-11T06:48:08.528146724Z [inf]  [0m
+2025-11-11T06:48:08.528158374Z [inf]  context: hj4l-aD0z
+2025-11-11T06:48:08.707421836Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:48:08.707482545Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:48:08.707501525Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:48:08.725648988Z [inf]  [internal] load build definition from Dockerfile
+2025-11-11T06:48:08.727401832Z [inf]  [internal] load metadata for docker.io/library/node:18-alpine
+2025-11-11T06:48:09.499821355Z [inf]  [internal] load metadata for docker.io/library/node:18-alpine
+2025-11-11T06:48:09.500015354Z [inf]  [internal] load .dockerignore
+2025-11-11T06:48:09.500034835Z [inf]  [internal] load .dockerignore
+2025-11-11T06:48:09.500074861Z [inf]  [internal] load .dockerignore
+2025-11-11T06:48:09.508836212Z [inf]  [internal] load .dockerignore
+2025-11-11T06:48:09.512724815Z [inf]  [7/7] RUN npm run build
+2025-11-11T06:48:09.512769031Z [inf]  [6/7] COPY . .
+2025-11-11T06:48:09.512782498Z [inf]  [5/7] RUN npm ci --only=production --ignore-scripts
+2025-11-11T06:48:09.512792817Z [inf]  [4/7] COPY package-lock.json ./
+2025-11-11T06:48:09.512801484Z [inf]  [3/7] COPY package.railway.json package.json
+2025-11-11T06:48:09.512808202Z [inf]  [internal] load build context
+2025-11-11T06:48:09.512817989Z [inf]  [2/7] WORKDIR /app
+2025-11-11T06:48:09.512823421Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.512839140Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.512848371Z [inf]  [internal] load build context
+2025-11-11T06:48:09.518687196Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.518783376Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.518807363Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.519066759Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.519082909Z [inf]  [internal] load build context
+2025-11-11T06:48:09.545341415Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.548501978Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:09.553493208Z [inf]  [internal] load build context
+2025-11-11T06:48:10.765753303Z [inf]  [1/7] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+2025-11-11T06:48:11.572025577Z [inf]  [2/7] WORKDIR /app
+2025-11-11T06:48:11.779852000Z [inf]  [2/7] WORKDIR /app
+2025-11-11T06:48:11.781399602Z [inf]  [3/7] COPY package.railway.json package.json
+2025-11-11T06:48:11.800179129Z [inf]  [3/7] COPY package.railway.json package.json
+2025-11-11T06:48:11.801358008Z [inf]  [4/7] COPY package-lock.json ./
+2025-11-11T06:48:11.817907754Z [inf]  [4/7] COPY package-lock.json ./
+2025-11-11T06:48:11.819020420Z [inf]  [5/7] RUN npm ci --only=production --ignore-scripts
+2025-11-11T06:48:12.013818947Z [inf]  npm warn config only Use `--omit=dev` to omit dev dependencies from the install.
+
+2025-11-11T06:48:12.43240863Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@isaacs/balanced-match@4.0.1',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:12.432763642Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@isaacs/brace-expansion@5.0.0',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:12.434010764Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'glob@11.0.3',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:12.434415202Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'minimatch@10.0.3',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:12.434893811Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'jackspeak@4.1.1',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:12.435233741Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'lru-cache@11.1.0',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:12.435559136Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'path-scurry@2.0.0',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:12.436168056Z [inf]  npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'rimraf@6.0.1',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+2025-11-11T06:48:25.715317113Z [inf]  
+added 3 packages, and audited 4 packages in 14s
+
+2025-11-11T06:48:25.716131401Z [inf]  
+found 0 vulnerabilities
+
+2025-11-11T06:48:25.717236129Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.6.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+npm notice To update run: npm install -g npm@11.6.2
+npm notice
+
+2025-11-11T06:48:25.854365860Z [inf]  [5/7] RUN npm ci --only=production --ignore-scripts
+2025-11-11T06:48:25.855314006Z [inf]  [6/7] COPY . .
+2025-11-11T06:48:25.919050409Z [inf]  [6/7] COPY . .
+2025-11-11T06:48:25.920613721Z [inf]  [7/7] RUN npm run build
+2025-11-11T06:48:26.123566337Z [inf]  
+> wt-tracker@0.0.1 build
+> npm run lint && npm run clean && npm run compile
+
+
+2025-11-11T06:48:26.274391801Z [inf]  
+> wt-tracker@0.0.1 lint
+> eslint src
+
+
+2025-11-11T06:48:26.277876304Z [inf]  sh: eslint: not found
+
+2025-11-11T06:48:26.332646468Z [err]  [7/7] RUN npm run build
+2025-11-11T06:48:26.346958389Z [err]  Dockerfile:18
+2025-11-11T06:48:26.346993996Z [err]  -------------------
+2025-11-11T06:48:26.347000565Z [err]  16 |
+2025-11-11T06:48:26.347006361Z [err]  17 |     # Build the project
+2025-11-11T06:48:26.347015727Z [err]  18 | >>> RUN npm run build
+2025-11-11T06:48:26.347021310Z [err]  19 |
+2025-11-11T06:48:26.347026845Z [err]  20 |     # Expose port (Railway will provide PORT env variable)
+2025-11-11T06:48:26.347032001Z [err]  -------------------
+2025-11-11T06:48:26.347038284Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 127
