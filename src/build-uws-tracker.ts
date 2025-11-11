@@ -93,8 +93,21 @@ export function buildUwsTracker({
         }
       },
     )
+    // Handle WebSocket upgrade requests explicitly
     .any("/*", (response: HttpResponse, request: HttpRequest) => {
       debugRequest(server, request);
+
+      // Check if this is a WebSocket upgrade request
+      const upgradeHeader = request.getHeader("upgrade");
+      const connectionHeader = request.getHeader("connection");
+      
+      if (upgradeHeader.toLowerCase() === "websocket" && 
+          connectionHeader.toLowerCase().includes("upgrade")) {
+        // Let the WebSocket handler in uws-tracker.ts handle this
+        // Don't send a 404, just close the response to allow upgrade
+        response.close();
+        return;
+      }
 
       const status = "404 Not Found";
       response.writeStatus(status).end(status);
