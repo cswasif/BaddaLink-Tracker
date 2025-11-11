@@ -1,6 +1,6 @@
 {
   "name": "wt-tracker",
-  "description": "High performance WebRTC tracker for peer-to-peer networking",
+  "description": "High performance WebRTC signaling server for peer-to-peer networking",
   "version": "0.0.1",
   "license": "Apache-2.0",
   "author": "Novage",

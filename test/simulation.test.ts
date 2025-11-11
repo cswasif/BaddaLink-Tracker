@@ -20,7 +20,7 @@ import { describe, it, expect } from "vitest";
 describe("simulation", () => {
   it("should pass random simulations", () => {
     const simulationsCount = 1000;
-    const torrentsCount = 2;
+    const swarmsCount = 2;
     const peersCount = 200;
     const offersCount = 10;
     const sameIdPeersRatio = 0.1;
@@ -58,10 +58,10 @@ describe("simulation", () => {
       const peerData = peersData[peerIndex];
 
       if (peerData.infoHash) {
-        // peer has been assigned to a torrent
+        // peer has been assigned to a swarm
         const random = Math.random();
         if (random < 0.05) {
-          // leave torrent
+          // leave swarm
           tracker.processMessage(
             {
               action: "announce",
@@ -81,7 +81,7 @@ describe("simulation", () => {
           sockets[peerIndex] = {};
           return;
         } else {
-          // announce on the same torrent
+          // announce on the same swarm
           announceMessage.peer_id = peerData.peerId;
           announceMessage.info_hash = peerData.infoHash;
           tracker.processMessage(announceMessage, peer);
@@ -89,10 +89,10 @@ describe("simulation", () => {
         }
       }
 
-      // assign the peer to a torrent
+      // assign the peer to a swarm
       announceMessage.peer_id = peerData.peerId;
       announceMessage.info_hash = peerData.infoHash = Math.floor(
-        Math.random() * torrentsCount,
+        Math.random() * swarmsCount,
       ).toString();
       tracker.processMessage(announceMessage, peer);
     }

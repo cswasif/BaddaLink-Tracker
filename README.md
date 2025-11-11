@@ -3,9 +3,9 @@
 
 # wt-tracker
 
-High-performance WebTorrent tracker.
+High-performance WebRTC signaling server for peer-to-peer networking.
 
-WebTorrent tracker is a required component of [WebTorrent](https://github.com/webtorrent/webtorrent) and [P2P Media Loader](https://github.com/Novage/p2p-media-loader) (peer-to-peer networks for web browsers) to do [WebRTC](https://en.wikipedia.org/wiki/WebRTC) signaling - exchanging connection data (i.e. [SDP](https://en.wikipedia.org/wiki/Session_Description_Protocol)) between peers - joining them into swarms.
+This WebRTC tracker is a required component for peer-to-peer networks in web browsers to do [WebRTC](https://en.wikipedia.org/wiki/WebRTC) signaling - exchanging connection data (i.e. [SDP](https://en.wikipedia.org/wiki/Session_Description_Protocol)) between peers - joining them into swarms.
 
 ## Features
 
@@ -20,7 +20,6 @@ WebTorrent tracker is a required component of [WebTorrent](https://github.com/we
 
 - [P2P Media Loader](https://github.com/Novage/p2p-media-loader) - an open-source engine for P2P streaming of live and on demand video directly in a web browser HTML page
 - [Novage, LLC](https://novage.com.ua/) - P2P development, support & consulting
-- [WebTorrent](https://github.com/webtorrent/webtorrent) - streaming torrent client for the web https://webtorrent.io
 - [uWebSockets.js](https://github.com/uNetworking/uWebSockets.js) - the Node.js bindings to µWebSockets, one of the most efficient web servers available
 
 ## Build instructions
