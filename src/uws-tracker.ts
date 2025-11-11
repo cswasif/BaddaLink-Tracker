@@ -41,8 +41,8 @@ const debugWebSocketsEnabled = debugWebSockets.enabled;
 const debugMessages = Debug(`wt-tracker:uws-tracker-messages${debugSuffix}`);
 const debugMessagesEnabled = debugMessages.enabled;
 
-const debugRequests = Debug(`wt-tracker:uws-tracker-requests${debugSuffix}`);
-const debugRequestsEnabled = debugRequests.enabled;
+// const debugRequests = Debug(`wt-tracker:uws-tracker-requests${debugSuffix}`); // Commented out for Railway compatibility
+// const debugRequestsEnabled = debugRequests.enabled; // Commented out for Railway compatibility
 
 const decoder = new StringDecoder();
 
@@ -66,8 +66,8 @@ export class UWebSocketsTracker {
   public readonly settings: UwsTrackerSettings;
 
   private webSocketsCount = 0;
-  private validateOrigin = false;
-  private readonly maxConnections: number;
+  // private validateOrigin = false; // Commented out for Railway compatibility
+  // private readonly maxConnections: number; // Commented out for Railway compatibility
 
   readonly #app: TemplatedApp;
 
@@ -97,7 +97,7 @@ export class UWebSocketsTracker {
       },
     };
 
-    this.maxConnections = this.settings.websockets.maxConnections;
+    // this.maxConnections = this.settings.websockets.maxConnections; // Commented out for Railway compatibility
 
     this.validateAccess();
 
@@ -173,37 +173,50 @@ export class UWebSocketsTracker {
       }
     }
 
-    this.validateOrigin =
-      this.settings.access.denyEmptyOrigin ||
-      this.settings.access.allowOrigins !== undefined ||
-      this.settings.access.denyOrigins !== undefined;
+    // this.validateOrigin = // Commented out for Railway compatibility
+    //   this.settings.access.denyEmptyOrigin ||
+    //   this.settings.access.allowOrigins !== undefined ||
+    //   this.settings.access.denyOrigins !== undefined;
   }
 
   private buildApplication(): void {
-    // Handle HTTP requests first
+    // Handle HTTP requests first - Railway requires proper HTTP handling
     this.#app.get("/", (response, request) => {
+      console.log("[HTTP] GET / - Health check or root request");
       response.writeHeader("Content-Type", "text/plain");
       response.end("WebSocket Server Running");
     });
 
-    // Handle WebSocket connections on the specified path
-    this.#app.ws(this.settings.websockets.path, {
-      compression: this.settings.websockets.compression,
-      maxPayloadLength: this.settings.websockets.maxPayloadLength,
-      idleTimeout: this.settings.websockets.idleTimeout,
-      open: this.onOpen,
-      upgrade: this.onUpgrade,
-      drain: (ws: WebSocket<UwsConnectionContext>) => {
-        if (debugWebSocketsEnabled) {
-          debugWebSockets("drain", ws.getBufferedAmount());
-        }
-      },
-      message: this.onMessage,
-      close: this.onClose,
+    // Handle health check endpoint explicitly
+    this.#app.get("/health", (response, request) => {
+      console.log("[HTTP] GET /health - Health check");
+      response.writeHeader("Content-Type", "application/json");
+      response.end(JSON.stringify({ status: "ok", timestamp: Date.now() }));
+    });
+
+    // Handle WebSocket connections on multiple paths for Railway compatibility
+    const wsPaths = [this.settings.websockets.path, "/ws", "/"];
+    
+    wsPaths.forEach(path => {
+      this.#app.ws(path, {
+        compression: this.settings.websockets.compression,
+        maxPayloadLength: this.settings.websockets.maxPayloadLength,
+        idleTimeout: this.settings.websockets.idleTimeout,
+        open: this.onOpen,
+        upgrade: this.onUpgrade,
+        drain: (ws: WebSocket<UwsConnectionContext>) => {
+          if (debugWebSocketsEnabled) {
+            debugWebSockets("drain", ws.getBufferedAmount());
+          }
+        },
+        message: this.onMessage,
+        close: this.onClose,
+      });
     });
 
     // Handle other HTTP routes
     this.#app.get("/*", (response, request) => {
+      console.log(`[HTTP] GET ${request.getUrl()} - General request`);
       response.writeHeader("Content-Type", "text/plain");
       response.end("WebSocket Server Running - Use /ws for WebSocket connections");
     });
@@ -222,92 +235,9 @@ export class UWebSocketsTracker {
     context: us_socket_context_t,
   ): void => {
     // Log WebSocket upgrade attempts for debugging
-    console.log(`[WebSocket Upgrade] URL: ${request.getUrl()}, Origin: ${request.getHeader("origin")}, User-Agent: ${request.getHeader("user-agent")}, Upgrade: ${request.getHeader("upgrade")}, Connection: ${request.getHeader("connection")}`);
+    console.log(`[WebSocket Upgrade] URL: ${request.getUrl()}, Origin: ${request.getHeader("origin")}, Upgrade: ${request.getHeader("upgrade")}, Connection: ${request.getHeader("connection")}`);
     
-    // Check if this is actually a WebSocket upgrade request
-    const upgradeHeader = request.getHeader("upgrade");
-    const connectionHeader = request.getHeader("connection");
-    
-    if (!upgradeHeader || upgradeHeader.toLowerCase() !== "websocket" || 
-        !connectionHeader || !connectionHeader.toLowerCase().includes("upgrade")) {
-      console.log(`[WebSocket Upgrade] Rejected: Not a WebSocket upgrade request`);
-      response.close();
-      return;
-    }
-    
-    if (
-      this.maxConnections !== 0 &&
-      this.webSocketsCount > this.maxConnections
-    ) {
-      if (debugRequestsEnabled) {
-        debugRequests(
-          this.settings.server.host,
-          this.settings.server.port,
-          "ws-denied-max-connections url:",
-          request.getUrl(),
-          "query:",
-          request.getQuery(),
-          "origin:",
-          request.getHeader("origin"),
-          "total:",
-          this.webSocketsCount,
-        );
-      }
-
-      response.close();
-      return;
-    }
-
-    if (debugWebSocketsEnabled) {
-      debugWebSockets("connected via URL", request.getUrl());
-    }
-
-    if (this.validateOrigin) {
-      const origin = request.getHeader("origin");
-
-      const shouldDeny =
-        (this.settings.access.denyEmptyOrigin && origin.length === 0) ||
-        this.settings.access.denyOrigins?.includes(origin) === true ||
-        this.settings.access.allowOrigins?.includes(origin) === false;
-
-      if (shouldDeny) {
-        if (debugRequestsEnabled) {
-          debugRequests(
-            this.settings.server.host,
-            this.settings.server.port,
-            "ws-denied url:",
-            request.getUrl(),
-            "query:",
-            request.getQuery(),
-            "origin:",
-            origin,
-            "total:",
-            this.webSocketsCount,
-          );
-        }
-
-        response.close();
-        return;
-      }
-    }
-
-    if (debugRequestsEnabled) {
-      debugRequests(
-        this.settings.server.host,
-        this.settings.server.port,
-        "ws-open url:",
-        request.getUrl(),
-        "query:",
-        request.getQuery(),
-        "origin:",
-        request.getHeader("origin"),
-        "total:",
-        this.webSocketsCount,
-      );
-    }
-
-    // Keep headers minimal for Railway compatibility
-    
+    // Simple Railway-compatible upgrade handler
     response.upgrade(
       {},
       request.getHeader("sec-websocket-key"),
